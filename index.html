@@ -32,8 +32,6 @@
                         .buttontwo {
                             background-color: purple;
                             border: 5px groove color black;
-                            opacity: 0.5;
-                            cursor:not-allowed;
                         }
                     
 
@@ -43,8 +41,12 @@
 
 <body>
     <script>
-        function Clickmefunction() {
-            document.getElementById("ButtonIDone").style.fontSize = "50px";
+        function ClickmeBig() {
+            document.getElementById("ReSizeP1").style.fontSize = "50px";
+        }
+
+        function ClickmeSmall() {
+            document.getElementById("ReSizeP1").style.fontSize = "10px";
         }
     </script>
 
@@ -52,16 +54,23 @@
 
     <button 
     
-            id="ButtonIDone"
-            onclick="Clickmefunction()";
+            onclick="ClickmeBig()";
             class="buttonone"
             >Click me
         </button>
 
 
-    <button class="buttontwo">Click me 2</button>
+    <button
+            onclick="ClickmeSmall()";
+            class="buttontwo"
+            >Clickme2
+        </button>
 
-    <p>I am a word</p>
+    <p id="ReSizeP1">
+        
+        I am a word
+    
+    </p>
 
 
 
