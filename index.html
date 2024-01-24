@@ -24,15 +24,28 @@
 
                     }
 
-                        .buttonone {
-                            background-color: red;
-                            border: 5px groove color brown;
+                        .SizeButton {
+                            background-color: Purple;
+                            border: 5px groove color white;
                         }
 
-                        .buttontwo {
-                            background-color: purple;
-                            border: 5px groove color black;
+                        /* .buttontwo {
+                            background-color: Green;
+                            border: 5px groove color white;
                         }
+
+                        .buttonthree {
+                            Background-color: Green;
+                            border: 50px groove color white;
+
+                        } */
+
+                    .TextButton {
+                        Background-color: orange;
+                        border: 50px groove color white;
+                        border-radius: 40px;
+
+                    }
                     
 
 
@@ -41,12 +54,20 @@
 
 <body>
     <script>
-        function ClickmeBig() {
-            document.getElementById("ReSizeP1").style.fontSize = "50px";
+        // function ClickmeBig() {
+        //     document.getElementById("ReSizeP1").style.fontSize = "50px";
+        // }
+
+        // function ClickmeSmall() {
+        //     document.getElementById("ReSizeP1").style.fontSize = "10px";
+        // }
+
+        function ReSize(PixelSize) {
+            document.getElementById("ReSizeP1").style.fontSize = PixelSize;
         }
 
-        function ClickmeSmall() {
-            document.getElementById("ReSizeP1").style.fontSize = "10px";
+        function ReName(Change) {
+            document.getElementById("ReSizeP1").innerHTML = Change
         }
     </script>
 
@@ -54,16 +75,30 @@
 
     <button 
     
-            onclick="ClickmeBig()";
-            class="buttonone"
-            >Click me
+            onclick="ReSize('50px')";
+            class="SizeButton"
+            >Resize to 50!
         </button>
 
 
     <button
-            onclick="ClickmeSmall()";
-            class="buttontwo"
-            >Clickme2
+            onclick="ReSize('100px')";
+            class="SizeButton"
+            >Resize to 100!
+        </button>
+
+    <button
+            onclick="ReSize('20px')";
+            class="SizeButton"
+            >Resize to 20!
+    </button>
+
+    <button
+        id="Rename"
+        onclick="ReName('42')";
+        class="TextButton"
+        >What is the meaning of life?
+
         </button>
 
     <p id="ReSizeP1">
