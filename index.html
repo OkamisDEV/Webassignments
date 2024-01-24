@@ -8,19 +8,62 @@
 
         <head>
             <style>
-    
-                body {
 
-                    background-color: black
-                    h1 color red
-             }
-        
+                    body { 
+                        
+                        background-color: black;
+                    }
+                    
+                    h1 {
+                        color: red;
+                    } 
+
+                    p {
+                        font-family: "Times New Roman", Times, serif;
+                        color: white; 
+
+                    }
+
+                        .buttonone {
+                            background-color: red;
+                            border: 5px groove color brown;
+                        }
+
+                        .buttontwo {
+                            background-color: purple;
+                            border: 5px groove color black;
+                            opacity: 0.5;
+                            cursor:not-allowed;
+                        }
+                    
+
+
             </style>
         </head>
 
 <body>
+    <script>
+        function Clickmefunction() {
+            document.getElementById("ButtonIDone").style.fontSize = "50px";
+        }
+    </script>
 
     <h1>What is the meaning of life?</h1>
+
+    <button 
+    
+            id="ButtonIDone"
+            onclick="Clickmefunction()";
+            class="buttonone"
+            >Click me
+        </button>
+
+
+    <button class="buttontwo">Click me 2</button>
+
+    <p>I am a word</p>
+
+
 
 </body>
 
